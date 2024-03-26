@@ -13,5 +13,8 @@
     "stylelint": "^16.3.1",
     "stylelint-config-recess-order": "^5.0.0",
     "stylelint-config-standard": "^36.0.0"
+  },
+  "dependencies": {
+    "modern-normalize": "^2.0.0"
   }
 }

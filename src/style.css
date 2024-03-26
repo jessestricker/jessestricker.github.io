@@ -1,0 +1,65 @@
+@import url("/node_modules/modern-normalize/modern-normalize.css");
+
+:root {
+  --color-text: lch(6.25% none none);
+  --color-background: lch(93.75% none none);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --color-text: lch(93.75% none none);
+    --color-background: lch(6.25% none none);
+  }
+}
+
+@media print {
+  :root {
+    --color-text: black;
+    --color-background: transparent;
+  }
+}
+
+html {
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  > :is(header, main, footer) {
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  > main {
+    flex-grow: 1;
+  }
+
+  > footer {
+    text-align: center;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+small {
+  font-size: 0.875em;
+  opacity: 0.75;
+}
