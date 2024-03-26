@@ -1,0 +1,13 @@
+{
+  "source": "src/index.html",
+  "browserslist": "defaults",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "prettier": "^3.2.5"
+  }
+}
