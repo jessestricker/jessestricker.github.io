@@ -1,14 +1,14 @@
 @import url("/node_modules/modern-normalize/modern-normalize.css");
 
 :root {
-  --color-text: lch(6.25% none none);
-  --color-background: lch(93.75% none none);
+  --color-text: oklch(15% 5% 230deg);
+  --color-background: oklch(95% 4% 80deg);
 }
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
-    --color-text: lch(93.75% none none);
-    --color-background: lch(6.25% none none);
+    --color-text: oklch(95% 5% 80deg);
+    --color-background: oklch(15% 4% 230deg);
   }
 }
 
