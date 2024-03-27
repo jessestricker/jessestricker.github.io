@@ -1,6 +1,11 @@
 {
   "source": "src/index.html",
   "browserslist": "defaults",
+  "targets": {
+    "default": {
+      "sourceMap": false
+    }
+  },
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
