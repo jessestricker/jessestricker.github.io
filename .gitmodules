@@ -1,4 +1,0 @@
-[submodule "vendor/adobe-source-sans"]
-	path = vendor/adobe-source-sans
-	url = https://github.com/adobe-fonts/source-sans
-	branch = release
