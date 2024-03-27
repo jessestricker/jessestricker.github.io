@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
+    "build": "parcel build --log-level=verbose --no-autoinstall",
     "lint": "stylelint src/**/*.css",
     "format": "prettier --write ."
   },
