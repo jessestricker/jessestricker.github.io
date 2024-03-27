@@ -1,6 +1,7 @@
 name: Build
 
 on:
+  workflow_call:
   push:
     branches: [main]
   pull_request:
@@ -9,6 +10,8 @@ on:
 jobs:
   build:
     name: Build
+    outputs:
+      artifact-id: ${{ steps.upload-artifact.outputs.artifact-id }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -26,8 +29,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload GitHub Pages artifact
+        id: upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: website
           path: ./dist/

@@ -1,0 +1,25 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  deploy:
+    name: Deploy
+    needs: [build]
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ needs.build.outputs.artifact-id }}
