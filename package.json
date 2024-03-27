@@ -1,14 +1,9 @@
 {
   "source": "src/index.html",
   "browserslist": "defaults",
-  "targets": {
-    "default": {
-      "sourceMap": false
-    }
-  },
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --log-level=verbose --no-autoinstall",
+    "build": "parcel build --log-level=verbose --no-source-maps --no-autoinstall",
     "lint": "stylelint src/**/*.css",
     "format": "prettier --write ."
   },
