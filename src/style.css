@@ -1,4 +1,5 @@
 @import url("/node_modules/modern-normalize/modern-normalize.css");
+@import url("./fonts.css");
 
 :root {
   --color-text: oklch(15% 0% 230deg);
@@ -20,6 +21,7 @@
 }
 
 html {
+  font-family: "Source Sans 3 Variable", sans-serif;
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);
