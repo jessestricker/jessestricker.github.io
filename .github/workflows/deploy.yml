@@ -20,10 +20,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v4.0.0
 
       - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
         id: deploy-pages
         with:
           artifact_name: ${{ needs.build.outputs.artifact-id }}
