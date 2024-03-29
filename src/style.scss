@@ -1,10 +1,14 @@
 @use "./source-sans.scss";
 
+// global utils
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
+
+// theme
 
 :root {
   --color-text: oklch(15% 0% 230deg);
@@ -24,6 +28,8 @@
   }
 }
 
+// root style
+
 html {
   font-family: source-sans.$family-name, sans-serif;
   line-height: 1.5;
@@ -34,6 +40,8 @@ html {
 body {
   margin: 0;
 }
+
+// page layout
 
 #page {
   display: flex;
@@ -64,6 +72,8 @@ body {
   }
 }
 
+// block elements
+
 h1,
 h2,
 h3,
@@ -76,6 +86,8 @@ ol {
   margin: 0;
   margin-bottom: 1rem;
 }
+
+// lists
 
 :is(ul, ol).horizontal-list {
   display: flex;
@@ -93,6 +105,8 @@ ol {
     }
   }
 }
+
+// links
 
 a {
   color: var(--color-text-link);
