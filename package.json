@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build --log-level=verbose --no-source-maps --no-autoinstall",
-    "lint": "stylelint src/**/*.scss",
+    "clean": "rm --recursive --force ./.parcel-cache/ ./dist/",
+    "lint": "stylelint 'src/**/*.scss'",
     "format": "prettier --write ."
   },
   "devDependencies": {
