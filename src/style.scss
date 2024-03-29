@@ -8,15 +8,18 @@
 
 :root {
   --color-text: oklch(15% 0% 230deg);
+  --color-text-link: oklch(30% 80% 230deg);
   --color-background: oklch(95% 4% 80deg);
 
   @media screen and (prefers-color-scheme: dark) {
     --color-text: oklch(95% 0% 80deg);
+    --color-text-link: oklch(95% 40% 80deg);
     --color-background: oklch(15% 4% 230deg);
   }
 
   @media print {
     --color-text: black;
+    --color-text-link: var(--color-text);
     --color-background: transparent;
   }
 }
@@ -88,5 +91,15 @@ ol {
     &:not(:first-child)::marker {
       content: "\2007•\2007";
     }
+  }
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+
+  &:hover {
+    text-decoration: none;
   }
 }
