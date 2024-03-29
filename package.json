@@ -1,5 +1,6 @@
 {
   "name": "jessestricker.github.io",
+  "license": "MIT",
   "source": "src/index.html",
   "browserslist": "defaults",
   "scripts": {
