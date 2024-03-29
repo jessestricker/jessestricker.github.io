@@ -1,4 +1,5 @@
 {
+  "name": "jessestricker.github.io",
   "source": "src/index.html",
   "browserslist": "defaults",
   "scripts": {
