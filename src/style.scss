@@ -1,4 +1,4 @@
-@import url("./fonts.css");
+@use "./source-sans.scss";
 
 *,
 ::before,
@@ -9,24 +9,20 @@
 :root {
   --color-text: oklch(15% 0% 230deg);
   --color-background: oklch(95% 4% 80deg);
-}
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
+  @media screen and (prefers-color-scheme: dark) {
     --color-text: oklch(95% 0% 80deg);
     --color-background: oklch(15% 4% 230deg);
   }
-}
 
-@media print {
-  :root {
+  @media print {
     --color-text: black;
     --color-background: transparent;
   }
 }
 
 html {
-  font-family: "Source Sans 3 Variable", sans-serif;
+  font-family: source-sans.$family-name, sans-serif;
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);
@@ -45,7 +41,9 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
 
-  > :is(header, main, footer) {
+  > header,
+  > main,
+  > footer {
     width: 100%;
     max-width: 40rem;
   }
