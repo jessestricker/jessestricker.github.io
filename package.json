@@ -16,7 +16,6 @@
     "stylelint-config-standard": "^36.0.0"
   },
   "dependencies": {
-    "@fontsource-variable/source-sans-3": "^5.0.20",
-    "modern-normalize": "^2.0.0"
+    "@fontsource-variable/source-sans-3": "^5.0.20"
   }
 }

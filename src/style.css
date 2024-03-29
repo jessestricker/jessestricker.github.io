@@ -1,5 +1,10 @@
-@import url("/node_modules/modern-normalize/modern-normalize.css");
 @import url("./fonts.css");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 
 :root {
   --color-text: oklch(15% 0% 230deg);
@@ -25,6 +30,10 @@ html {
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);
+}
+
+body {
+  margin: 0;
 }
 
 .page {
