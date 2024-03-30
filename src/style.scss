@@ -11,14 +11,14 @@
 // theme
 
 :root {
-  --color-text: oklch(15% 0% 230deg);
-  --color-text-link: oklch(30% 80% 230deg);
-  --color-background: oklch(95% 4% 80deg);
+  --color-text: #001e26; //       Okhsv(220°, 100%,  15%)
+  --color-text-link: #007994; //  Okhsv(220°, 100%,  60%)
+  --color-background: #fff8ee; // Okhsv( 80°,   5%, 100%)
 
   @media screen and (prefers-color-scheme: dark) {
-    --color-text: oklch(95% 0% 80deg);
-    --color-text-link: oklch(95% 40% 80deg);
-    --color-background: oklch(15% 4% 230deg);
+    --color-text: #e3d7c5; //       Okhsv( 80°, 10%, 90%)
+    --color-text-link: #e3b35f; //  Okhsv( 80°, 60%, 90%)
+    --color-background: #0c1518; // Okhsv(220°, 30%, 10%)
   }
 
   @media print {
