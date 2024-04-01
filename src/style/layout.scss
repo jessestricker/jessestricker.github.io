@@ -1,0 +1,39 @@
+%block-element {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %block-element;
+}
+
+p {
+  @extend %block-element;
+}
+
+ol,
+ul {
+  @extend %block-element;
+
+  &.horizontal-list {
+    display: flex;
+    padding: 0;
+
+    > li {
+      list-style-position: inside;
+
+      &:first-child {
+        list-style-type: none;
+      }
+
+      &:not(:first-child)::marker {
+        content: "\2007•\2007";
+      }
+    }
+  }
+}

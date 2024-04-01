@@ -1,0 +1,30 @@
+@use "./style/reset.scss";
+@use "./style/typo.scss";
+@use "./style/layout.scss";
+
+#page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  > :is(header, main, footer) {
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  > main {
+    flex-grow: 1;
+  }
+
+  > footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.875em;
+    opacity: 0.75;
+  }
+}

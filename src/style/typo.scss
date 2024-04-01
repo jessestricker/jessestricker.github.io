@@ -1,7 +1,9 @@
-$family-name: "Source Sans 3 Variable";
+@use "theme";
+
+$-font-name: "Source Sans 3 Variable";
 
 @font-face {
-  font-family: $family-name;
+  font-family: $-font-name;
   font-style: normal;
   font-weight: 200 900;
   src: url("/node_modules/@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2")
@@ -10,10 +12,27 @@ $family-name: "Source Sans 3 Variable";
 }
 
 @font-face {
-  font-family: $family-name;
+  font-family: $-font-name;
   font-style: italic;
   font-weight: 200 900;
   src: url("/node_modules/@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-italic.woff2")
     format("woff2-variations");
   font-display: swap;
+}
+
+html {
+  font-family: $-font-name, sans-serif;
+  line-height: 1.5;
+  color: theme.$var-color-text;
+  background-color: theme.$var-color-background;
+}
+
+a {
+  color: theme.$var-color-text-link;
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+
+  &:hover {
+    text-decoration: none;
+  }
 }

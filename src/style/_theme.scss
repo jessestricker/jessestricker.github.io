@@ -1,0 +1,63 @@
+@use "sass:map";
+@use "sass:list";
+
+// define theme colors
+
+$-colors: (
+  "default": (
+    // Okhsv(220°, 100%,  15%)
+    "text": #001e26,
+    // Okhsv(220°, 100%,  60%)
+    "text-link": #007994,
+    // Okhsv( 80°,   5%, 100%)
+    "background": #fff8ee,
+  ),
+  "dark": (
+    // Okhsv( 80°,  10%,  90%)
+    "text": #e3d7c5,
+    // Okhsv( 80°,  60%,  90%)
+    "text-link": #e3b35f,
+    // Okhsv(220°,  30%,  10%)
+    "background": #0c1518,
+  ),
+  "print": (
+    "text": black,
+    "text-link": black,
+    "background": transparent,
+  ),
+);
+$-color-names: map.keys(map.get($-colors, "default"));
+
+@function -css-variable-name($name) {
+  @if not list.index($-color-names, $name) {
+    @error "unknown color name #{$name}";
+  }
+
+  @return --color-#{$name};
+}
+
+// define SCSS variables
+
+$var-color-text: var(-css-variable-name("text"));
+$var-color-text-link: var(-css-variable-name("text-link"));
+$var-color-background: var(-css-variable-name("background"));
+
+// define CSS variables
+
+:root {
+  @each $name, $value in map.get($-colors, "default") {
+    #{-css-variable-name($name)}: #{$value};
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    @each $name, $value in map.get($-colors, "dark") {
+      #{-css-variable-name($name)}: #{$value};
+    }
+  }
+
+  @media print {
+    @each $name, $value in map.get($-colors, "print") {
+      #{-css-variable-name($name)}: #{$value};
+    }
+  }
+}
