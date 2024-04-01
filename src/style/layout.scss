@@ -21,18 +21,15 @@ ul {
   @extend %block-element;
 
   &.horizontal-list {
-    display: flex;
-    padding: 0;
+    padding-left: 0;
 
     > li {
-      list-style-position: inside;
+      display: inline;
 
-      &:first-child {
-        list-style-type: none;
-      }
-
-      &:not(:first-child)::marker {
-        content: "\2007•\2007";
+      &:not(:first-child)::before {
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        content: "•";
       }
     }
   }
