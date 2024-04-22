@@ -19,6 +19,6 @@
     "stylelint-config-standard-scss": "^13.1.0"
   },
   "dependencies": {
-    "@fontsource-variable/source-sans-3": "^5.0.20"
+    "@fontsource-variable/source-sans-3": "^5.0.21"
   }
 }
